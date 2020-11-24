@@ -1,5 +1,5 @@
 # Dockerfile to build docker-compose for aarch64
-FROM arm64v8/python:3.6.5-stretch
+FROM arm64v8/python:3.9.0-stretch
 
 # Add env
 ENV LANG C.UTF-8
@@ -18,6 +18,7 @@ ENV SIX_VER 1.11.0
 
 # Install dependencies
 # RUN apt-get update && apt-get install -y
+RUN pip install --update pip
 RUN pip install six==$SIX_VER
 
 # Compile the pyinstaller "bootloader"
