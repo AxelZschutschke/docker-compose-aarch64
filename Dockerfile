@@ -1,5 +1,5 @@
 # Dockerfile to build docker-compose for aarch64
-FROM arm64v8/python:3.9.0-stretch
+FROM arm64v8/python:3.9.0
 
 # Add env
 ENV LANG C.UTF-8
