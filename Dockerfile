@@ -9,13 +9,13 @@ COPY ./vendor/qemu-bin /usr/bin/
 RUN [ "cross-build-start" ]
 
 # Set the versions
-ENV DOCKER_COMPOSE_VER 1.27.4
+ARG DOCKER_COMPOSE_VER 1.27.4
 
 # docker-compose requires pyinstaller 3.3.1 (check github.com/docker/compose/requirements-build.txt)
 # If this changes, you may need to modify the version of "six" below
-ENV PYINSTALLER_VER 3.3.1
+ARG PYINSTALLER_VER 3.3.1
 # "six" is needed for PyInstaller. v1.11.0 is the latest as of PyInstaller 3.3.1
-ENV SIX_VER 1.11.0
+ARG SIX_VER 1.11.0
 
 # Install dependencies
 # RUN apt-get update && apt-get install -y
